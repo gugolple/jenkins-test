@@ -3,7 +3,8 @@
 def fizzbuzz(start,end,multiples,answers):
     #Usual programming task, used as based for testing for jenkins automation
 
-    counters = [start % i for i in multiples]
+    counters = [start % i if start != i else i for i in multiples]
+
     #I keep track of multiples with counters instead of doing the modulus 
     #operation because the modulus operation is slow, it is not the focus
     #of this code
