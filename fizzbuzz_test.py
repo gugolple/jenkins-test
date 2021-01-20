@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
 
 import unittest
+import random
 from fizzbuzz import fizzbuzz
 
-[print(i) for i in fizzbuzz(1,10,[1],["T"])]
+def TestGenerator:
+
+
+
+
+if __name__ == "__main__":
+    print("Test")
+    sys.exit("Test what happens if the \
+test return failure"

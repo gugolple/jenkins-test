@@ -16,5 +16,10 @@ pipeline {
                 sh 'python3 fizzbuzz.py'
             }
         }
+        stage('run test') {
+            steps {
+                sh 'python3 fizzbuzz_test.py'
+            }
+        }
     }
 }
