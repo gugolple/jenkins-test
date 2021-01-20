@@ -11,5 +11,10 @@ pipeline {
                 sh 'python3 --version'
             }
         }
+        stage('run code') {
+            steps {
+                sh 'python3 fizzbuzz.py'
+            }
+        }
     }
 }
