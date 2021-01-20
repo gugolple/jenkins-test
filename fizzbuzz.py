@@ -3,7 +3,7 @@
 def fizzbuzz(start,end,multiples,answers):
     #Usual programming task, used as based for testing for jenkins automation
 
-    counters = [start % i if start != i else i for i in multiples]
+    counters = [start % i if start % i != 0 else i for i in multiples]
 
     #I keep track of multiples with counters instead of doing the modulus 
     #operation because the modulus operation is slow, it is not the focus
@@ -34,5 +34,10 @@ def fizzbuzz(start,end,multiples,answers):
 
 
 if __name__ == "__main__":
+    print("Test1")
     res = fizzbuzz(1,100,[3,5],["fizz","buzz"])
+    [print(i) for i in res]
+    print()
+    print("Test2")
+    res = fizzbuzz(1,100,[1],["PseudoTest"])
     [print(i) for i in res]
