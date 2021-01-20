@@ -21,5 +21,10 @@ pipeline {
                 sh 'python3 fizzbuzz_test.py'
             }
         }
+        stage('post test') {
+            steps {
+                sh 'echo "Test functional"'
+            }
+        }
     }
 }
