@@ -10,8 +10,10 @@ def RandomString(letters, length):
     return ''.join(random.choices(letters, k=length))
 
 class TestFizzBuzz(unittest.TestCase):
+    #Main class for testing, required for use with unittest to inherit it
 
     def TestCheck(self,start,end,multiples,answers):
+        #Check of the fizzbuzz result against a known and proven algorithm
         result = fizzbuzz(start,end,multiples,answers)
         for position,number in enumerate(range(start,end+1)):
             calculated = []
@@ -25,6 +27,7 @@ class TestFizzBuzz(unittest.TestCase):
             self.assertEqual(result[position],calculated)
 
     def TestGenerator(self):
+        #Create variable input to test the fizzbuzz algorithm
         for iteration in range(10):
             start = random.randint(0,100)
             end = start + random.randint(0,100)
